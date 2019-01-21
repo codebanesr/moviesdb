@@ -1,41 +1,17 @@
-<div class="movie-card">
-  <div class="movie-header manOfSteel">
-    <div class="header-icon-container">
-      <a href="#">
-        <i class="material-icons header-icon"></i>
-      </a>
+<section (click)="goToDetail()">
+  <div class="col-md-4 img-container">
+    <img src="assets/img/dummy.png" alt="Movie" class="img-responsive">
+  </div>
+  <div class="col-md-8">
+    <h4>
+      <span class="title">{{movie?.title}}</span>
+      <span class="year">({{movie?.releaseYear}})</span>
+    </h4>
+    <div class="summary"> {{movie?.summary}} </div>
+    <div class="bottom-bar">
+      <div class="genre"> {{movie?.genre?.name}}</div>
+      <div class="director"> {{movie?.director?.name}} </div>
     </div>
   </div>
-  <!--movie-header-->
-  <div class="movie-content">
-    <div class="movie-content-header">
-      <a href="#">
-        <h3 class="movie-title">Man of Steel</h3>
-      </a>
-      <div class="imax-logo"></div>
-    </div>
-    <div class="movie-info">
-      <div class="info-section">
-        <label>Date & Time</label>
-        <span>Sun 8 Sept - 10:00PM</span>
-      </div>
-      <!--date,time-->
-      <div class="info-section">
-        <label>Screen</label>
-        <span>03</span>
-      </div>
-      <!--screen-->
-      <div class="info-section">
-        <label>Row</label>
-        <span>F</span>
-      </div>
-      <!--row-->
-      <div class="info-section">
-        <label>Seat</label>
-        <span>21,22</span>
-      </div>
-      <!--seat-->
-    </div>
-  </div>
-  <!--movie-content-->
-</div>
+  <div class="clearfix"></div>
+</section>

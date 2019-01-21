@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { MovieThumbnailComponent } from './movie-thumbnail/movie-thumbnail.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
     MovieListComponent,
     NavbarComponent,
     MovieThumbnailComponent,
+    MovieDetailComponent,
     
   ],
   imports: [
