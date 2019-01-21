@@ -16,7 +16,6 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
     NavbarComponent,
     MovieThumbnailComponent,
     MovieDetailComponent,
-    
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,7 @@ import { MoviesService } from '../services/movies.service';
 @Component({
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
-  styleUrls: ['./movie-list.component.css']
+  styleUrls: ['./movie-list.component.scss']
 })
 export class MovieListComponent implements OnInit {
 
@@ -16,7 +16,8 @@ export class MovieListComponent implements OnInit {
   movies: any[] = []
   ngOnInit() {
     this.moviesService.getMovieList().subscribe((movies: any)=>{
-      this.movies = movies.results;
+      console.log(movies)
+      this.movies = movies;
     })
   }
 }

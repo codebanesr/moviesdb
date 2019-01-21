@@ -1,5 +1,5 @@
-<ul>
-  <li *ngFor="let movie of movies" style="display: inline">
-    <app-movie-thumbnail></app-movie-thumbnail>
-  </li>
-</ul>
+<div class="container">
+    <div *ngFor="let movie of movies">
+        <app-movie-thumbnail [movie]="movie"></app-movie-thumbnail>
+      </div>
+</div>
