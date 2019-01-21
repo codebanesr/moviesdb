@@ -8,6 +8,7 @@ import { NavbarComponent } from './common/navbar/navbar.component';
 import { MovieThumbnailComponent } from './movie-thumbnail/movie-thumbnail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -15,12 +16,13 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
     MovieListComponent,
     NavbarComponent,
     MovieThumbnailComponent,
-    MovieDetailComponent,
+    MovieDetailComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

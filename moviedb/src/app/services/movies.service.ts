@@ -28,7 +28,7 @@ export class MoviesService {
       catchError(this.handleError<any>('getMovies'))
     );
   }
-  
+
 
   getMovie(id: Number): Observable<Movie> {
     return this.http
@@ -40,23 +40,30 @@ export class MoviesService {
   }
 
 
-  private handleError<T> (operation = 'operation', result?: T) {
+  private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
-  
+
       // TODO: send the error to remote logging infrastructure
       console.error(error); // log to console instead
-  
+
       // TODO: better job of transforming error for user consumption
       console.log(`${operation} failed: ${error.message}`);
-  
+
       // Let the app keep running by returning an empty result.
       return of(result as T);
     };
+  }
+
+
+  searchMovies(searchTerm: string) {
+    return this.http.get(`/api/sessions/search?search=${searchTerm}`).pipe(map((response: Response) => {
+      return response.json();
+    }), catchError(<any>('searchMovies')))
   }
 }
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type':  'application/json'
+    'Content-Type': 'application/json'
   })
 };

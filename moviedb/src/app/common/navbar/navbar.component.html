@@ -1,20 +1,30 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Always expand</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" href="#">SMDb</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02"
+    aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarsExample02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link active" href="#">Trending <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Popular</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-md-0">
+    <!-- <form class="form-inline my-2 my-md-0">
       <input class="form-control" type="text" placeholder="Search">
+    </form> -->
+
+    <form id="searchForm" (ngSubmit)="searchSessions(searchTerm)" class="form-inline my-2 my-md-0" placeholder="Search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search Sessions" [(ngModel)]="searchTerm">
+      </div>
+      <button class="btn btn-primary ml-1">
+        Search
+      </button>
     </form>
   </div>
 </nav>
