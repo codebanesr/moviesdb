@@ -6,12 +6,13 @@
     <div class="card-body">
       <h1 class="card-title">{{movie?.title}} ({{movie?.releaseYear}})</h1>
       <div class="container">
-        <div class="row">
-          <div class="col-4 metadata">
+        <div class="row parent">
+          <div class="col-4 metadata child child">
             <i class="fa fa-star" aria-hidden="true"></i>
             <p>9.5/10</p>
           </div>
-          <div class="col-8 metadata">{{movie?.genre?.name}}</div>
+          <div class="col-8 metadata child">{{movie?.genre?.name}}</div>
+          <div class="col-12 child"> <a href="#">View cast</a></div>
         </div>
       </div>
       <p class="card-text">{{movie?.summary}}</p>
