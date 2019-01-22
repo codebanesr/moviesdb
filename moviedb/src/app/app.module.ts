@@ -9,7 +9,8 @@ import { MovieThumbnailComponent } from './movie-thumbnail/movie-thumbnail.compo
 import { AppRoutingModule } from './app-routing.module';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import {FormsModule} from '@angular/forms';
-import { CastListComponent } from './cast/cast-list/cast-list.component'
+import { CastListComponent } from './cast/cast-list/cast-list.component';
+import { CastThumbnailComponent } from './cast/cast-thumbnail/cast-thumbnail.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CastListComponent } from './cast/cast-list/cast-list.component'
     NavbarComponent,
     MovieThumbnailComponent,
     MovieDetailComponent,
-    CastListComponent
+    CastListComponent,
+    CastThumbnailComponent
   ],
   imports: [
     FormsModule,

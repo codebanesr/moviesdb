@@ -1,0 +1,1 @@
+export const XRapidAPIKey = 'f5108f6b7amsh47d0c6b24fd043fp112deejsn6c9a6fd2d106'
